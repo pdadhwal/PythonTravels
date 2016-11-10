@@ -1,4 +1,4 @@
-from edge import Edge
+from kiwiland.edge import Edge
 
 
 class DirectedGraph:

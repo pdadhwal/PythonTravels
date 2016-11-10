@@ -1,4 +1,4 @@
-from directed_graph import DirectedGraph
+from kiwiland.directed_graph import DirectedGraph
 import pytest
 
 

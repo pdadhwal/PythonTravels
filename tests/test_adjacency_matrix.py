@@ -1,5 +1,5 @@
-from adjacency_matrix import AdjacencyMatrix
-from directed_graph import DirectedGraph
+from kiwiland.adjacency_matrix import AdjacencyMatrix
+from kiwiland.directed_graph import DirectedGraph
 import pytest
 
 

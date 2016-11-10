@@ -1,6 +1,6 @@
-from directed_graph import DirectedGraph
-from exception import InvalidRouteError
-from route import Route
+from kiwiland.directed_graph import DirectedGraph
+from kiwiland.exception import InvalidRouteError
+from kiwiland.route import Route
 
 import pytest
 
