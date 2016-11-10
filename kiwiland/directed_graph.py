@@ -3,12 +3,20 @@ from kiwiland.edge import Edge
 
 class DirectedGraph:
     """ Represents a directed graph of nodes and edges """
+
     def __init__(self, edges=None):
         """ Creates a DirectedGraph """
         if edges is not None:
             self.__edges = DirectedGraph.__get_edges(edges)
         else:
             self.__edges = set()
+
+        nodes = []
+        for edge in self.__edges:
+            nodes.append(edge._from)
+            nodes.append(edge._to)
+
+        self.__nodes = set(nodes)
 
     @staticmethod
     def __get_edges(edges):
@@ -27,6 +35,10 @@ class DirectedGraph:
     def edges(self):
         """ Return edges in the DirectedGraph"""
         return self.__edges
+
+    @property
+    def nodes(self):
+        return self.__nodes
 
     def __repr__(self):
         return "DirectedGraph({0})".format(self.__edges)
