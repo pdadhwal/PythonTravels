@@ -20,4 +20,3 @@ class AdjacencyMatrix:
                 else:
                     self.__adjacency_matrix[e._from] = [e]
             self.__adjacency_matrix_built = True
-        return self.__adjacency_matrix_built
