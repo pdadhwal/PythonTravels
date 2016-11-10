@@ -1,5 +1,5 @@
 from kiwiland.adjacency_matrix import AdjacencyMatrix
-from kiwiland.exception import InvalidRouteError
+from kiwiland.exceptions import InvalidRouteError
 
 
 class Route:

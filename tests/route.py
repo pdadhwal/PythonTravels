@@ -1,5 +1,5 @@
 from kiwiland.directed_graph import DirectedGraph
-from kiwiland.exception import InvalidRouteError
+from kiwiland.exceptions import InvalidRouteError
 from kiwiland.route import Route
 
 import pytest
