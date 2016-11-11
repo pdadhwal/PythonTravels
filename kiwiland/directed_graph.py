@@ -13,8 +13,8 @@ class DirectedGraph:
 
         nodes = []
         for edge in self.__edges:
-            nodes.append(edge._from)
-            nodes.append(edge._to)
+            nodes.append(edge.start)
+            nodes.append(edge.end)
 
         self.__nodes = set(nodes)
 

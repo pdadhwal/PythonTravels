@@ -22,9 +22,9 @@ class TestEdge:
         assert 'Edge must have atleast 3 elements. e.g AB4' in str(valError)
 
     def test_retrieve_from_to_and_distance(self, edge):
-        assert edge._from == 'A'
-        assert edge._to == 'B'
-        assert edge._distance == 5
+        assert edge.start == 'A'
+        assert edge.end == 'B'
+        assert edge.distance == 5
 
     def test_edge_from_to_cannot_be_same_node(self):
         with pytest.raises(ValueError) as valError:

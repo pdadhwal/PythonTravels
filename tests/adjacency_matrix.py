@@ -12,10 +12,10 @@ class TestAdjacencyMatrix:
     def adjmatrix(self, graph):
         return AdjacencyMatrix(graph)
 
-    def test_can_retrieve_valid_adjacent_nodes(self, adjmatrix):
-        adjacent_nodes = adjmatrix.get_adjacent_nodes('A')
-        assert len(adjacent_nodes) == 3
-
     def test_check_with_invalid_adjacent_nodes(self, adjmatrix):
         adjacent_nodes = adjmatrix.get_adjacent_nodes('Z')
         assert len(adjacent_nodes) == 0
+
+    def test_can_retrieve_valid_adjacent_nodes(self, adjmatrix):
+        adjacent_nodes = adjmatrix.get_adjacent_nodes('A')
+        assert len(adjacent_nodes) == 3

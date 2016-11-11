@@ -14,21 +14,21 @@ class TestRoute:
         with pytest.raises(InvalidRouteError):
             route = Route(DirectedGraph(), '')
 
-    def test_bad_route_raises_invalidrouteerror(self, graph):
+    def test_bad_route_raises_invalid_route_error(self, graph):
         with pytest.raises(InvalidRouteError):
             route = Route(graph, 'A-Z-D')
 
-    def test_bad_route_raises_invalidrouteerror_when_no_nodes_are_in(self, graph):
+    def test_bad_route_raises_invalid_route_error_when_no_nodes_are_in(self, graph):
         with pytest.raises(InvalidRouteError):
             route = Route(graph, 'X-Y-Z')
 
     def test_can_create_good_route(self, graph):
         route = Route(graph, 'A-B-C-D')
 
-    def test_repr(self,graph):
+    def test_repr(self, graph):
         route = Route(graph, 'A-B-C-D')
         assert repr(route) == "Route(A-B-C-D)"
 
     def test_route_distance(self, graph):
-        route = Route(graph,'A-B-C-D')
+        route = Route(graph, 'A-B-C-D')
         assert route.distance == 17

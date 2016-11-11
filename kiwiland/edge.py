@@ -9,15 +9,15 @@ class Edge:
         if not edge[2:].isnumeric():
             raise ValueError('Edge length must be numeric')
 
-        self._from = edge[0]
-        self._to = edge[1]
-        self._distance = int(edge[2:])
+        self.start = edge[0]
+        self.end = edge[1]
+        self.distance = int(edge[2:])
 
     def __str__(self):
-        return "{0}{1}{2}".format(self._from, self._to, self._distance)
+        return "{0}{1}{2}".format(self.start, self.end, self.distance)
 
     def __repr__(self):
-        return "Edge({0}{1}{2})".format(self._from, self._to, self._distance)
+        return "Edge({0}{1}{2})".format(self.start, self.end, self.distance)
 
     def __lt__(self, other):
         return str(self) < str(other)

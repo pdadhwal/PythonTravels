@@ -22,14 +22,13 @@ class Route:
                 if len(adj_nodes) == 0:
                     raise InvalidRouteError
 
-                edges_to_next_node = [edge for edge in adj_nodes if edge._to == next_node]
+                distances = [distance for node, distance in adj_nodes if node == next_node]
 
-                if len(edges_to_next_node) != 1:
+                if len(distances) == 1:
+                    self.__distance += distances[0]
+                else:
                     message = "{0} not an adjacent node of {1} in {2}".format(curr_node, next_node, graph)
                     raise InvalidRouteError(message)
-                else:
-                    self.__distance += edges_to_next_node[0]._distance
-                    pass
 
                 curr_node = next_node
         except StopIteration:

@@ -22,6 +22,4 @@ class TestRouteDistanceCalculator:
     def test_route_with_spec(self, route_spec, graph):
         for spec, expected_answer in iter(route_spec):
             calc = RouteDistanceCalculator(graph, DistanceRouteSpec(spec))
-
-        assert calc.route_distance == expected_answer
-
+            assert calc.route_distance == expected_answer
