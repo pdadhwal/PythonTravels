@@ -1,4 +1,3 @@
-from kiwiland.adjacency_matrix import AdjacencyMatrix
 from kiwiland.exceptions import InvalidRouteError
 
 
@@ -7,7 +6,6 @@ class Route:
         self.__path = path
         self.__distance = 0
 
-        adj_matrix = AdjacencyMatrix(graph)
         path_iter = iter(path.strip().split('-'))
 
         curr_node = next(path_iter)
@@ -17,7 +15,7 @@ class Route:
         try:
             while True:
                 next_node = next(path_iter)
-                adj_nodes = adj_matrix.get_adjacent_nodes(curr_node)
+                adj_nodes = graph.get_adjacent_nodes(curr_node)
 
                 if len(adj_nodes) == 0:
                     raise InvalidRouteError

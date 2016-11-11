@@ -18,6 +18,21 @@ class DirectedGraph:
 
         self.__nodes = set(nodes)
 
+        self.__adjacency_matrix = {}
+        for e in self.__edges:
+            points = (e.end, e.distance)
+            if e.start not in self.__adjacency_matrix:
+                self.__adjacency_matrix[e.start] = set()
+
+            set_of_node_and_distances = self.__adjacency_matrix[e.start]
+            set_of_node_and_distances.add(points)
+
+    def get_adjacent_nodes(self, node):
+        try:
+            return self.__adjacency_matrix[node]
+        except KeyError:
+            return set()
+
     @staticmethod
     def __get_edges(edges):
         """Builds a set of edges by iterating over the input"""
