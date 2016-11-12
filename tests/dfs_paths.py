@@ -19,3 +19,11 @@ class TestDFSPaths:
 
         assert len(paths) == 1
         assert paths == [['A', 'B']]
+
+    def test_iterate_all_paths(self, graph):
+        g = DirectedGraph(['AB5', 'BC4', 'CD8', 'DC8', 'DE6', 'AD5', 'CE2', 'EB3', 'AE7'])
+        paths = dfs_paths(graph, 'A', 'E')
+        for path in paths:
+            print(path)
+
+        pass

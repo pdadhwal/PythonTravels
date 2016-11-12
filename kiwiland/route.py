@@ -1,6 +1,7 @@
+from functools import total_ordering
 from kiwiland.exceptions import InvalidRouteError
 
-
+@total_ordering
 class Route:
     def __init__(self, graph, path):
         self.__path = path
@@ -34,6 +35,9 @@ class Route:
 
     def __repr__(self):
         return "Route({0})".format(self.__path)
+
+    def __lt__(self, other):
+        return self.distance < other.distance
 
     @property
     def distance(self):

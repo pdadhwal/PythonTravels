@@ -32,3 +32,10 @@ class TestRoute:
     def test_route_distance(self, graph):
         route = Route(graph, 'A-B-C-D')
         assert route.distance == 17
+
+    # rest are implemented by functools.total_ordering
+    def test_route_comparison_lt(self, graph):
+        route1 = Route(graph, 'B-C')
+        route2 = Route(graph, 'A-B')
+
+        assert route1 < route2
