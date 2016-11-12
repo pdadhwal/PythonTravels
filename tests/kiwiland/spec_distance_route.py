@@ -1,6 +1,7 @@
-from kiwiland.spec_routes import DistanceRouteSpec
-from kiwiland.exceptions import InvalidRouteSpecError
 import pytest
+from kiwiland.spec_routes import DistanceRouteSpec
+
+from kiwiland.exceptions import InvalidRouteSpecError
 
 
 class TestExtractDistanceRouteSpec:

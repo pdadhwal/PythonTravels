@@ -1,6 +1,7 @@
-from kiwiland.spec_routes import RoutesBetweenNodesWithMaxStopsSpec
-from kiwiland.exceptions import InvalidRouteSpecError
 import pytest
+from kiwiland.spec_routes import RoutesBetweenNodesWithMaxStopsSpec
+
+from kiwiland.exceptions import InvalidRouteSpecError
 
 
 class TestRoutesBetweenNodesWithMaxStopsSpec:

@@ -1,5 +1,6 @@
 import pytest
 from kiwiland.directed_graph import DirectedGraph
+
 from kiwiland.dfs import dfs_paths
 
 

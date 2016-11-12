@@ -1,5 +1,6 @@
-from kiwiland.directed_graph import DirectedGraph
 import pytest
+
+from kiwiland.directed_graph import DirectedGraph
 
 
 class TestDirectedGraph:

@@ -1,5 +1,6 @@
-from kiwiland.exceptions import InvalidRouteSpecError
 import re
+
+from kiwiland.exceptions import InvalidRouteSpecError
 
 
 class DistanceRouteSpec:

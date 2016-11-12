@@ -1,8 +1,7 @@
+import pytest
 from kiwiland.directed_graph import DirectedGraph
 from kiwiland.exceptions import InvalidRouteError
 from kiwiland.route import Route
-
-import pytest
 
 
 class TestRoute:

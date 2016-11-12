@@ -1,5 +1,7 @@
 from functools import total_ordering
+
 from kiwiland.exceptions import InvalidRouteError
+
 
 @total_ordering
 class Route:

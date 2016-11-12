@@ -1,5 +1,5 @@
-from kiwiland.edge import Edge
 import pytest
+from kiwiland.edge import Edge
 
 
 class TestEdge:

@@ -1,8 +1,7 @@
-from kiwiland.directed_graph import DirectedGraph
-from kiwiland.spec_routes import DistanceRouteSpec
-from kiwiland.route_distance_calculator import RouteDistanceCalculator
-from kiwiland.exceptions import InvalidRouteError
 import pytest
+from kiwiland.directed_graph import DirectedGraph
+from kiwiland.route_distance_calculator import RouteDistanceCalculator
+from kiwiland.spec_routes import DistanceRouteSpec
 
 
 class TestRouteDistanceCalculator:
