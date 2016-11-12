@@ -33,6 +33,12 @@ class DirectedGraph:
         except KeyError:
             return set()
 
+    def __getitem__(self, item):
+        try:
+            return {x for x, distance in self.__adjacency_matrix[item]}
+        except KeyError:
+            return set()
+
     @staticmethod
     def __get_edges(edges):
         """Builds a set of edges by iterating over the input"""
