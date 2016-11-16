@@ -10,7 +10,7 @@ class TestInsertionSort:
 
     @pytest.fixture
     def sorted_list(self):
-        return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+        return list(range(1, 16))
 
     @pytest.fixture
     def empty_list(self):
