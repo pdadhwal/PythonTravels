@@ -1,51 +1,42 @@
-from datetime import datetime
-import pytest
 from algorithms import insertion_sort
+import random
 
 
 class TestInsertionSort:
-    @pytest.fixture
-    def unsorted_list(self):
-        return [15, 9, 8, 1, 4, 11, 7, 12, 13, 6, 5, 3, 16, 2, 10, 14]
+    def test_empty_asc(self):
+        insertion_sort.asc([])
 
-    @pytest.fixture
-    def sorted_list(self):
-        return list(range(1, 16))
+    def test_none_asc(self):
+        insertion_sort.asc(None)
 
-    @pytest.fixture
-    def empty_list(self):
-        return []
+    def test_for_different_input_sizes_desc(self):
+        """Insertion sort is slow on inputs of large sizes"""
+        for size in range(1, 50):
+            c = [random.randint(1, 1000) for _ in range(size)]
 
-    def test_asc_empty_list(self, empty_list):
-        insertion_sort.asc(empty_list)
+            copy = c
 
-        assert 0 == len(empty_list)
+            # sort using mergeSort and using builtin sort
+            insertion_sort.asc(c)
+            copy.sort()
 
-    def test_desc_empty_list(self, empty_list):
-        insertion_sort.desc(empty_list)
+            assert c == copy
 
-        assert 0 == len(empty_list)
+    def test_empty_desc(self):
+        insertion_sort.desc([])
 
-    def test_asc_none(self):
-        coll = None
-        insertion_sort.asc(coll)
+    def test_none_desc(self):
+        insertion_sort.desc(None)
 
-        assert coll is None
+    def test_for_different_input_sizes_desc(self):
+        """Insertion sort is slow on inputs of large sizes"""
+        for size in range(1, 50):
+            c = [random.randint(1, 1000) for _ in range(size)]
 
-    def test_desc_none(self):
-        coll = None
-        insertion_sort.desc(coll)
+            copy = c
 
-        assert coll is None
+            # sort using mergeSort and using builtin sort
+            insertion_sort.desc(c)
+            copy.sort(reverse=True)
 
-    def test_desc_unsorted_list(self, unsorted_list):
-        insertion_sort.desc(unsorted_list)
-
-        for i in range(1, 17):
-            assert unsorted_list[i - 1] == 16 - i + 1
-
-    def test_asc_unsorted_list(self, unsorted_list):
-        insertion_sort.asc(unsorted_list)
-
-        for i in range(1, 16):
-            assert unsorted_list[i - 1] == i
+            assert c == copy
