@@ -1,4 +1,5 @@
 def asc(a_list):
+    """Sorts the input list (in place) in ascending order"""
     if a_list is None:
         return
 
@@ -15,7 +16,8 @@ def asc(a_list):
             position -= 1
 
 
-def desc(a_list, verbose=False):
+def desc(a_list):
+    """Sorts the input list (in place) in descending order"""
     if a_list is None:
         return
 
