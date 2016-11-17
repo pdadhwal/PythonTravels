@@ -1,13 +1,14 @@
 import random
-from algorithms import merge_sort
+
+from algorithms.sort import merge
 
 
 class TestAscMergeSort:
     def test_empty(self):
-        merge_sort.asc([])
+        merge.asc([])
 
     def test_none(self):
-        merge_sort.asc(None)
+        merge.asc(None)
 
     def test_for_different_input_sizes(self):
         for size in range(1, 500):
@@ -16,7 +17,7 @@ class TestAscMergeSort:
             copy = c
 
             # sort using mergeSort and using builtin sort
-            merge_sort.asc(c)
+            merge.asc(c)
             copy.sort()
 
             assert c == copy
